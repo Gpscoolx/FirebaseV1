@@ -11,6 +11,8 @@ class script(object):
 ❂ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
 ❂ UPDATES CHANNEL: <a href=https://t.me/RhythmRockerz>𝕽𝓱𝔂𝓽𝓱𝓶 ℝ𝓸𝓬𝓴𝓮𝓻𝔃</a>
     
+<b>DEVS:</b>
+- <a href=https://t.me/RyanRR_Bot>Team RHYTHMROCKERZ</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
