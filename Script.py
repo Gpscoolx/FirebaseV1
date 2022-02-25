@@ -9,7 +9,7 @@ class script(object):
 ❂ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ❂ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
 ❂ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-❂ UPDATES CHANNEL: <a href=https://t.me/RhythmRockerz>𝕽𝓱𝔂𝓽𝓱𝓶 ℝ𝓸𝓬𝓴𝓮𝓻𝔃</a>
+❂ 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: <a href=https://t.me/RhythmRockerz>𝕽𝓱𝔂𝓽𝓱𝓶 ℝ𝓸𝓬𝓴𝓮𝓻𝔃</a>
     
 <b>DEVS:</b>
 - <a href=https://t.me/RyanRR_Bot>Team RHYTHMROCKERZ</a>"""
