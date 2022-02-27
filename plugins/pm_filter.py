@@ -403,7 +403,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🔔𝚄𝙿𝙳𝙰𝚃𝙴𝚂📢', url='https://t.me/RhythmRockerz')
             ],[
-            InlineKeyboardButton('ℹ🧩 𝙷𝙴𝙻𝙿 💌', callback_data='help'),
+            InlineKeyboardButton('🧩 𝙷𝙴𝙻𝙿 💌', callback_data='help'),
             InlineKeyboardButton('🪅 𝙰𝙱𝙾𝚄𝚃 🪧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -421,7 +421,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Extra Mods', callback_data='extra')
             ],[
             InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
