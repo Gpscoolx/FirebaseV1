@@ -18,10 +18,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates📢', url='https://t.me/RhythmRockerz')
+                InlineKeyboardButton('🔔𝚄𝙿𝙳𝙰𝚃𝙴𝚂📢', url='https://t.me/RhythmRockerz')
             ],
             [
-                InlineKeyboardButton('ℹ🧩 Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('🧩 𝙷𝙴𝙻𝙿 💌', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -37,13 +37,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('✱ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿𝚂 ✱', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(' 🔔 Updates📢', url='https://t.me/RhythmRockerz')
+            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🔔𝚄𝙿𝙳𝙰𝚃𝙴𝚂📢', url='https://t.me/RhythmRockerz')
             ],[
-            InlineKeyboardButton('🧩 Help', callback_data='help'),
-            InlineKeyboardButton('💓 About', callback_data='about')
+            InlineKeyboardButton('🧩 𝙷𝙴𝙻𝙿 💌', callback_data='help'),
+            InlineKeyboardButton('🪅 𝙰𝙱𝙾𝚄𝚃 🪧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -62,7 +62,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🔔 Join Updates Channel📢", url=invite_link.invite_link
+                    "🔔𝙹𝙾𝙸𝙽 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻📢", url=invite_link.invite_link
                 )
             ]
         ]
@@ -78,13 +78,13 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('✱ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿𝚂 ✱', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(' 🔔 Updates📢', url='https://t.me/RhythmRockerz')
+            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🔔𝚄𝙿𝙳𝙰𝚃𝙴𝚂📢', url='https://t.me/RhythmRockerz')
             ],[
-            InlineKeyboardButton('ℹ🧩 Help', callback_data='help'),
-            InlineKeyboardButton('💓 About', callback_data='about')
+            InlineKeyboardButton('🧩 𝙷𝙴𝙻𝙿 💌', callback_data='help'),
+            InlineKeyboardButton('🪅 𝙰𝙱𝙾𝚄𝚃 🪧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -161,7 +161,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
+        msg = await message.reply("𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙸𝙽𝙶...⏳", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
