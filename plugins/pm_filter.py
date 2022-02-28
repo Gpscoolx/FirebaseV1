@@ -46,7 +46,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages, please send the request again.",show_alert=True)
+        await query.answer("😁𝙷𝙴𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, 𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙴𝙰𝚁𝙲𝙷 𝙰 𝙽𝙴𝚆 𝙾𝙽𝙴 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁𝚂𝙴𝙻𝙵 !.",show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -88,15 +88,15 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⛵ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🌹 Pages {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
+            [InlineKeyboardButton("⛵ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🌹 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="𝙿𝙰𝙶𝙴𝚂")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"🌹 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("NEXT ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append([InlineKeyboardButton(f"🌹 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="𝙿𝙰𝙶𝙴𝚂"), InlineKeyboardButton("NEXT ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("⛵ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🌹 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton(f"🌹 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="𝙿𝙰𝙶𝙴𝚂"),
                 InlineKeyboardButton("NEXT ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
@@ -127,7 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙾𝙽 𝚂𝙾𝙾𝙽... 📤. /n𝚂𝚃𝙰𝚈 𝚃𝚄𝙽𝙴𝙳..𝙾𝙽 @RhythmRockerz 🥳')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -601,11 +601,11 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"🌹 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ➡️",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"🌹 1/{round(int(total_results)/10)}",callback_data="𝙿𝙰𝙶𝙴𝚂"), InlineKeyboardButton(text="NEXT ➡️",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🌹 1/1",callback_data="pages")]
+            [InlineKeyboardButton(text="🌹 1/1",callback_data="𝙿𝙰𝙶𝙴𝚂")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if IMDB else None
     if imdb:
@@ -691,7 +691,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃😟. 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄𝚁 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶😉
+")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -703,7 +704,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply("𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃.😟\n𝙳𝙸𝙳 𝚈𝙾𝚄 𝙼𝙴𝙰𝙽 𝙰𝙽𝚈 𝙾𝙽𝙴 𝙾𝙵 𝚃𝙷𝙴𝚂𝙴? 🤔", reply_markup=InlineKeyboardMarkup(btn))
     
 
 async def manual_filters(client, message, text=False):
